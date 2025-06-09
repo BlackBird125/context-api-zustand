@@ -1,7 +1,7 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { UserProvider } from "./contexts/UserContext";
-import { LoginPage } from "./pages/LoginPage";
-import { HomePage } from "./pages/HomePage";
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { UserProvider } from './contexts/UserContext';
+import { LoginPage } from './pages/LoginPage';
+import { HomePage } from './pages/HomePage';
 
 function App() {
   return (

@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useUserContext } from "../contexts/UserContext";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../contexts/UserContext';
 
 export const LoginPage = () => {
-  const [inputUsername, setInputUsername] = useState("");
+  const [inputUsername, setInputUsername] = useState('');
   const { login } = useUserContext();
   const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ export const LoginPage = () => {
     e.preventDefault();
     if (inputUsername.trim()) {
       login(inputUsername);
-      navigate("/home");
+      navigate('/home');
     }
   };
 

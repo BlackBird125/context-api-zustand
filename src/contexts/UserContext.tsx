@@ -1,4 +1,4 @@
-import { createContext, useContext, ReactNode, useState } from "react";
+import { createContext, useContext, ReactNode, useState } from 'react';
 
 type UserContextType = {
   username: string;
@@ -9,14 +9,14 @@ type UserContextType = {
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
 
   const login = (name: string) => {
     setUsername(name);
   };
 
   const logout = () => {
-    setUsername("");
+    setUsername('');
   };
 
   return (
@@ -29,7 +29,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
 export const useUserContext = () => {
   const context = useContext(UserContext);
   if (context === undefined) {
-    throw new Error("useUserContext must be used within a UserProvider");
+    throw new Error('useUserContext must be used within a UserProvider');
   }
   return context;
 };

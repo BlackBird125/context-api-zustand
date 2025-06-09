@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { useUserContext } from "../contexts/UserContext";
+import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../contexts/UserContext';
 
 export const HomePage = () => {
   const { username, logout } = useUserContext();
@@ -7,7 +7,7 @@ export const HomePage = () => {
 
   const handleLogout = () => {
     logout();
-    navigate("/login");
+    navigate('/login');
   };
 
   return (
